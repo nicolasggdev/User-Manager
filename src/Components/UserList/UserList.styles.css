@@ -1,0 +1,7 @@
+p{
+    text-transform: lowercase;
+}
+
+.user-item div{
+    display: flex;
+}
