@@ -1,5 +1,5 @@
 .user-form{
-    background-color: #ffffff;
+    background-color: #ffffffff;
     width: 100%;
     height: 48vh;
     padding: 0.5rem;
@@ -66,6 +66,7 @@ h2{
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
     padding: 0.3rem;
+    padding-left: 1rem;
     border: 0.1rem solid #000000;
     border-radius: 1rem;
 }
@@ -73,6 +74,7 @@ h2{
 .input-email{
     width: 12rem;
     padding: 0.3rem;
+    padding-left: 1rem;
     border: 0.1rem solid #000000;
     border-radius: 1rem;
 }
@@ -80,6 +82,7 @@ h2{
 .input-password{
     width: 10rem;
     padding: 0.3rem;
+    padding-left: 1rem;
     border: 0.1rem solid #000000;
     border-right: none;
     border-top-left-radius: 1rem;
@@ -97,10 +100,15 @@ h2{
 }
 
 .input-date{
+    padding-left: 1rem;
     width: 12rem;
     padding: 0.3rem;
     border: 0.1rem solid #000000;
     border-radius: 1rem;
+}
+
+.input-name, .input-email, .input-password, .input-date:focus{
+    outline: none;
 }
 
 .container-user-buttons button{

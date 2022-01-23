@@ -1,7 +1,69 @@
 p{
     text-transform: lowercase;
+    overflow: auto; /* Temporalmente */
 }
 
-.user-item div{
+ul{
+    height: 52vh;
+    overflow: auto;
+}
+
+.user-item{
+    background-color: #ffffffe1;
+    height: 10rem;
+    width: 80%;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 5px 0px #00000070;
+    -webkit-box-shadow: 10px 10px 5px 0px #00000070;
+    -moz-box-shadow: 10px 10px 5px 0px #00000070;
+}
+
+.container-user-item{
     display: flex;
+    align-items: center;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.container-user-item-button{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.container-user-item i{
+    width: 1rem;
+    margin-right: 0.3rem;
+}
+
+.container-user-item p{
+    display: flex;
+    align-items: center;
+    height: 1.8rem;
+    width: 90%;
+}
+
+.container-user-item-button button{
+    background-color: transparent;
+    border: none;
+}
+
+.fa-user-edit, .fa-user-times{
+    color: #7027A0;
+    font-size: 1.5rem;
+}
+
+.fa-user-edit:hover{
+    color: #1DB9C3;
+}
+
+.fa-user-times:hover{
+    color: #ff0000;
 }

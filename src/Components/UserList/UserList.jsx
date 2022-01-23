@@ -11,28 +11,28 @@ const UserList = ({users, deleteUser, setUserSelected}) => {
         users.map( user => (
           <li className='user-item' key={user.id}>
 
-            <div>
+            <div className='container-user-item'>
               <i className="fas fa-user"></i>
               <p> 
                 { user.first_name } {user.last_name}
               </p>
             </div>
 
-            <div>
+            <div className='container-user-item'>
               <i className="fas fa-envelope"></i>
               <p> 
                 { user.email }
               </p>
             </div>
 
-            <div>
+            <div className='container-user-item'>
               <i className="fas fa-birthday-cake"></i>
               <p> 
                 { user.birthday } 
               </p>
             </div>
 
-            <div>
+            <div className='container-user-item-button'>
               <button onClick={() => setUserSelected(user)}>
                 <i className="fas fa-user-edit"></i>
               </button>
