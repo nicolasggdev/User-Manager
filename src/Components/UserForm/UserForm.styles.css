@@ -1,0 +1,119 @@
+.user-form{
+    background-color: #ffffff;
+    width: 100%;
+    height: 48vh;
+    padding: 0.5rem;
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+}
+
+.container-title{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 90%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+h2{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    height: 3rem;
+    width: 3rem;
+}
+
+.container-user-inputs{
+    width: 90%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container-user-buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.icon{
+    margin-right: 0.4rem;
+}
+
+.icon i{
+    width: 1rem;
+}
+
+.container-input-name{
+    display: flex; 
+    align-items: center;  
+}
+
+.container-input-name div{
+    width: 100%;
+}
+
+
+.input-name{
+    width: 12rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    padding: 0.3rem;
+    border: 0.1rem solid #000000;
+    border-radius: 1rem;
+}
+
+.input-email{
+    width: 12rem;
+    padding: 0.3rem;
+    border: 0.1rem solid #000000;
+    border-radius: 1rem;
+}
+
+.input-password{
+    width: 10rem;
+    padding: 0.3rem;
+    border: 0.1rem solid #000000;
+    border-right: none;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.button-password{
+    width: 2rem;
+    padding: 0.3rem;
+    background-color: transparent;
+    border: 0.1rem solid #000000;
+    border-left: none;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.input-date{
+    width: 12rem;
+    padding: 0.3rem;
+    border: 0.1rem solid #000000;
+    border-radius: 1rem;
+}
+
+.container-user-buttons button{
+    width: 4.5rem;
+    height: 2rem;
+    background-color: #7027A0;
+    border: none;
+    border-radius: 1rem;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.container-user-buttons button:hover{
+    background-color: #1DB9C3;
+}

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import "./UserForm.styles.css";
 
 // Components
-// import Image from "../Img/Logo.png"
+import Image from "../Img/Logo.png"
 
 const UserForm = ({addUser,userSelected, userDeselected, editUser}) => {
 
@@ -51,43 +51,47 @@ const UserForm = ({addUser,userSelected, userDeselected, editUser}) => {
   };
 
   return (
-    <form onSubmit={submit}>
+    <form onSubmit={submit} className='user-form'>
 
-        <div>
+        <div className='container-title'>
           <h2>
             New User
           </h2>
-          {/* <img src={Image} alt="logo" />  */}
-          {/* Hay que asignarle un logo. ¿Porque no carga la img? */}
+          <img className='logo' src={Image} alt="logo" /> 
         </div>
 
-        <div>
-          <label htmlFor="userName">
+        <div className='container-user-inputs container-input-name'>
+          <label className='icon' htmlFor="userName">
             <i className="fas fa-user"></i>
           </label>
-          <input 
-            type="text" 
-            id="userName" 
-            value={first_name}
-            placeholder='First Name' 
-            onChange={ e => setFirst_name(e.target.value)}
-            required
-          />
-          <input 
-            type="text" 
-            id="userLastname" 
-            value={last_name}
-            placeholder='Last Name' 
-            onChange={ e => setLast_name(e.target.value)}
-            required
-          />
+          <div>
+            <input 
+              className='input-name'
+              type="text" 
+              id="userName" 
+              value={first_name}
+              placeholder='First Name' 
+              onChange={ e => setFirst_name(e.target.value)}
+              required
+            />
+            <input 
+              className='input-name'
+              type="text" 
+              id="userLastname" 
+              value={last_name}
+              placeholder='Last Name' 
+              onChange={ e => setLast_name(e.target.value)}
+              required
+            />
+          </div>
         </div>
 
-        <div>
-          <label htmlFor="email">
+        <div className='container-user-inputs'>
+          <label className='icon' htmlFor="email">
             <i className="fas fa-envelope"></i>
           </label>
           <input 
+            className='input-email'
             type="email" 
             id="email" 
             value={email}
@@ -97,11 +101,12 @@ const UserForm = ({addUser,userSelected, userDeselected, editUser}) => {
           />
         </div>
 
-        <div>
-          <label htmlFor="password">
+        <div className='container-user-inputs'>
+          <label className='icon' htmlFor="password">
             <i className="fas fa-lock"></i>
           </label>
           <input 
+            className='input-password'
             type={ isVisible ? "text" : "password" } 
             id="password" 
             placeholder='Password' 
@@ -109,7 +114,7 @@ const UserForm = ({addUser,userSelected, userDeselected, editUser}) => {
             onChange={ e => setPassword(e.target.value)}
             required
           />
-          <button type="button" onClick={() => setIsVisible(!isVisible)}>
+          <button className='button-password' type="button" onClick={() => setIsVisible(!isVisible)}>
             {
               isVisible ? (
                 <i className="fas fa-eye"></i>
@@ -120,11 +125,12 @@ const UserForm = ({addUser,userSelected, userDeselected, editUser}) => {
           </button>
         </div>
 
-        <div>
-          <label htmlFor="birthday">
+        <div className='container-user-inputs'>
+          <label className='icon' htmlFor="birthday">
             <i className="fas fa-birthday-cake"></i>
           </label>
           <input 
+            className='input-date'
             type="date" 
             id="birthday" 
             value={birthday}
@@ -133,7 +139,7 @@ const UserForm = ({addUser,userSelected, userDeselected, editUser}) => {
           />
         </div>
         
-        <div>
+        <div className='container-user-buttons'>
           <button>
             { userSelected.id !== undefined ? "Confirm" : "Submit"}
           </button>
