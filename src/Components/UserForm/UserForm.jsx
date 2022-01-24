@@ -53,6 +53,8 @@ const UserForm = ({addUser,userSelected, userDeselected, editUser}) => {
   return (
     <form onSubmit={submit} className='user-form'>
 
+      <div className='container-user-form'>
+
         <div className='container-title'>
           <h2>
             New User
@@ -86,7 +88,7 @@ const UserForm = ({addUser,userSelected, userDeselected, editUser}) => {
           </div>
         </div>
 
-        <div className='container-user-inputs'>
+        <div className='container-user-inputs container-input-email'>
           <label className='icon' htmlFor="email">
             <i className="fas fa-envelope"></i>
           </label>
@@ -101,31 +103,33 @@ const UserForm = ({addUser,userSelected, userDeselected, editUser}) => {
           />
         </div>
 
-        <div className='container-user-inputs'>
+        <div className='container-user-inputs container-input-password'>
           <label className='icon' htmlFor="password">
             <i className="fas fa-lock"></i>
           </label>
-          <input 
-            className='input-password'
-            type={ isVisible ? "text" : "password" } 
-            id="password" 
-            placeholder='Password' 
-            value={password}
-            onChange={ e => setPassword(e.target.value)}
-            required
-          />
-          <button className='button-password' type="button" onClick={() => setIsVisible(!isVisible)}>
-            {
-              isVisible ? (
-                <i className="fas fa-eye"></i>
-              ) : (
-                <i className="fas fa-eye-slash"></i>
-              )
-            }
-          </button>
+          <div>
+            <input 
+              className='input-password'
+              type={ isVisible ? "text" : "password" } 
+              id="password" 
+              placeholder='Password' 
+              value={password}
+              onChange={ e => setPassword(e.target.value)}
+              required
+            />
+            <button className='button-password' type="button" onClick={() => setIsVisible(!isVisible)}>
+              {
+                isVisible ? (
+                  <i className="fas fa-eye"></i>
+                ) : (
+                  <i className="fas fa-eye-slash"></i>
+                )
+              }
+            </button>
+          </div>
         </div>
 
-        <div className='container-user-inputs'>
+        <div className='container-user-inputs container-input-date'>
           <label className='icon' htmlFor="birthday">
             <i className="fas fa-birthday-cake"></i>
           </label>
@@ -133,6 +137,7 @@ const UserForm = ({addUser,userSelected, userDeselected, editUser}) => {
             className='input-date'
             type="date" 
             id="birthday" 
+            placeholder='dd/mm/aaaa' 
             value={birthday}
             onChange={ e => setBirthday(e.target.value)}
             required
@@ -148,6 +153,8 @@ const UserForm = ({addUser,userSelected, userDeselected, editUser}) => {
           }
           
         </div>
+
+      </div>
 
     </form>
   );
